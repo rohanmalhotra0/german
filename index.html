@@ -46,16 +46,16 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,15,0.9);backdrop-fil
 
 /* FLASHCARD */
 .fc-wrap{display:flex;flex-direction:column;align-items:center;gap:1rem;}
-.fc-meta{width:100%;max-width:580px;display:flex;align-items:center;gap:10px;}
+.fc-meta{width:100%;max-width:700px;display:flex;align-items:center;gap:10px;}
 .fc-num{font-size:11px;color:var(--text3);white-space:nowrap;min-width:30px;}
 .fc-bar-bg{flex:1;height:2px;background:var(--bg4);border-radius:2px;overflow:hidden;}
 .fc-bar-fill{height:100%;background:linear-gradient(90deg,var(--purple),var(--teal));border-radius:2px;transition:width 0.4s ease;}
 .fc-total-lbl{font-size:11px;color:var(--text3);white-space:nowrap;}
 
-.card3d{width:100%;max-width:580px;min-height:240px;perspective:1400px;cursor:pointer;}
-.card3d-inner{position:relative;width:100%;min-height:240px;transform-style:preserve-3d;transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);}
+.card3d{width:100%;max-width:700px;min-height:320px;perspective:1400px;cursor:pointer;}
+.card3d-inner{position:relative;width:100%;min-height:320px;transform-style:preserve-3d;transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);}
 .card3d.flipped .card3d-inner{transform:rotateY(180deg);}
-.fc-face{position:absolute;width:100%;min-height:240px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--r2);padding:2rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+.fc-face{position:absolute;width:100%;min-height:320px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--r2);padding:2.75rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
 .fc-front{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--purple);}
 .fc-back{background:var(--purple-bg);border:1px solid var(--purple3);border-left:3px solid var(--teal);transform:rotateY(180deg);}
 .fc-lbl{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.75rem;}
