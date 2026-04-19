@@ -32,7 +32,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,15,0.9);backdrop-fil
 .nav-tab.active{color:var(--purple2);background:var(--purple-bg);}
 
 /* PAGES */
-.page{display:none;max-width:740px;margin:0 auto;padding:1.5rem 1.25rem;}
+.page{display:none;max-width:920px;margin:0 auto;padding:1.5rem 1.25rem;}
 .page.active{display:block;}
 
 /* CHIPS */
@@ -46,22 +46,22 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,15,0.9);backdrop-fil
 
 /* FLASHCARD */
 .fc-wrap{display:flex;flex-direction:column;align-items:center;gap:1rem;}
-.fc-meta{width:100%;max-width:700px;display:flex;align-items:center;gap:10px;}
+.fc-meta{width:100%;max-width:860px;display:flex;align-items:center;gap:10px;}
 .fc-num{font-size:11px;color:var(--text3);white-space:nowrap;min-width:30px;}
 .fc-bar-bg{flex:1;height:2px;background:var(--bg4);border-radius:2px;overflow:hidden;}
 .fc-bar-fill{height:100%;background:linear-gradient(90deg,var(--purple),var(--teal));border-radius:2px;transition:width 0.4s ease;}
 .fc-total-lbl{font-size:11px;color:var(--text3);white-space:nowrap;}
 
-.card3d{width:100%;max-width:700px;min-height:320px;perspective:1400px;cursor:pointer;}
-.card3d-inner{position:relative;width:100%;min-height:320px;transform-style:preserve-3d;transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);}
+.card3d{width:100%;max-width:860px;min-height:420px;perspective:1400px;cursor:pointer;}
+.card3d-inner{position:relative;width:100%;min-height:420px;transform-style:preserve-3d;transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);}
 .card3d.flipped .card3d-inner{transform:rotateY(180deg);}
-.fc-face{position:absolute;width:100%;min-height:320px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--r2);padding:2.75rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+.fc-face{position:absolute;width:100%;min-height:420px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--r2);padding:3.5rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
 .fc-front{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--purple);}
 .fc-back{background:var(--purple-bg);border:1px solid var(--purple3);border-left:3px solid var(--teal);transform:rotateY(180deg);}
 .fc-lbl{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.75rem;}
 .fc-back .fc-lbl{color:var(--teal);}
-.fc-term{font-family:'Sora',sans-serif;font-size:1.35rem;font-weight:500;color:var(--text);line-height:1.4;}
-.fc-def{font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:500;color:var(--purple2);line-height:1.5;}
+.fc-term{font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:500;color:var(--text);line-height:1.4;}
+.fc-def{font-family:'Sora',sans-serif;font-size:1.45rem;font-weight:500;color:var(--purple2);line-height:1.5;}
 .fc-note{font-size:12px;color:var(--text2);margin-top:0.75rem;font-style:italic;max-width:380px;}
 .fc-badge{margin-top:0.75rem;padding:3px 10px;border-radius:99px;font-size:10.5px;font-weight:600;letter-spacing:0.05em;background:var(--purple-bg);color:var(--purple2);border:1px solid var(--purple3);}
 .fc-hint{font-size:10.5px;color:var(--text3);margin-top:0.75rem;}
@@ -159,7 +159,7 @@ td.ex{color:var(--text2);font-style:italic;font-size:12px;}
 </style>
 
 <nav>
-  <div class="nav-logo">🇩🇪 German II</div>
+  <div class="nav-logo" onclick="goTo('flashcards',document.querySelector('.nav-tab'))" style="cursor:pointer;">🇩🇪 German II</div>
   <div class="nav-tabs">
     <button class="nav-tab active" onclick="goTo('flashcards',this)">Flashcards</button>
     <button class="nav-tab" onclick="goTo('learn',this)">Learn</button>
@@ -169,12 +169,6 @@ td.ex{color:var(--text2);font-style:italic;font-size:12px;}
     <button class="nav-tab" onclick="goTo('k8',this)">Kapitel 8</button>
   </div>
   <button id="theme-btn" onclick="toggleTheme()" style="flex-shrink:0;padding:5px 13px;border-radius:99px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);font-size:12px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;transition:all 0.15s;white-space:nowrap;">☀ Light</button>
-  <button class="nav-tab active" onclick="goTo('flashcards',this)">Flashcards</button>
-  <button class="nav-tab" onclick="goTo('learn',this)">Learn</button>
-  <button class="nav-tab" onclick="goTo('quiz',this)">Quiz</button>
-  <button class="nav-tab" onclick="goTo('grammar',this)">Grammar</button>
-  <button class="nav-tab" onclick="goTo('vocab',this)">Vocab</button>
-  <button class="nav-tab" onclick="goTo('k8',this)">Kapitel 8</button>
 </nav>
 
 <!-- FLASHCARDS -->
